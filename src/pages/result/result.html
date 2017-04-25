@@ -1,0 +1,59 @@
+<ion-header>
+
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title><span class="OpenSansBold white">Participa y Gana</span></ion-title>
+  </ion-navbar>
+
+  <div class="subHeader">
+    <ion-card-header class="gris2 card-header-subtitle text-center">
+      <div item-left class="subHeaderLeft">Bienvenido, {{name}}</div>
+      <div item-right  class="subHeaderRight">{{trivia}}</div>
+    </ion-card-header>
+  </div>
+
+  <div class="subHeader">
+    <ion-card-header class="background-rosa card-header-subtitle-2 OpenSansItalic Leter-white">
+      Verifique sus datos
+      <ion-icon name="arrow-down" item-right></ion-icon>
+    </ion-card-header>
+  </div>
+
+</ion-header>
+
+<ion-content no-padding>
+
+  <br><br>
+  <ion-list>
+    <!--
+    <ion-item >
+          <h2>{{namepictureSponsors}}</h2>
+          <ion-note class='font-black' item-right>
+            Patrocinio
+          </ion-note>
+      </ion-item>
+    -->
+      <ion-item >
+          <h2>{{city}}</h2>
+          <ion-note class='font-black' item-right>
+            Ciudad
+          </ion-note>
+      </ion-item>
+      <ion-item >
+          <h2>{{cine}}</h2>
+          <ion-note class='font-black' item-right>
+            Cine
+          </ion-note>
+      </ion-item>
+  </ion-list>
+  <br><br>
+  <div>
+    <button ion-button full round class="button-home background-rosa2" (click)="onSponsors()">Editar</button>
+  </div>
+  <div>
+    <button ion-button full round class="button-home background-gris3" (click)="onclick()">Confirmar</button>
+  </div>
+
+</ion-content>

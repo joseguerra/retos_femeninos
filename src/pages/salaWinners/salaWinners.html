@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-navbar>
+    <ion-grid>
+      <ion-row>
+        <ion-col width-33>
+          <button ion-button icon-only start menuToggle>
+            <ion-icon name="menu"></ion-icon>
+          </button>
+        </ion-col>
+        <ion-col width-33>
+          <ion-title text-center>
+            <span class="white OpenSansRegular">Participá y Ganá</span>
+          </ion-title>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-navbar>
+  <div class="subHeader">
+      <ion-item class="Background-red">        
+          Seleccione una Sala
+        <ion-icon name="arrow-down" item-right></ion-icon>
+      </ion-item>
+  </div>
+</ion-header>
+
+<ion-content>
+  <ion-refresher (ionRefresh)="doRefresh($event);">
+    <ion-refresher-content
+      pullingIcon="arrow-down"
+      pullingText="Desliza hacia abajo"
+      refreshingSpinner="circles"
+      refreshingText="Recargando...">
+    </ion-refresher-content>
+  </ion-refresher>
+  <!--<div class="Background-red divParticipa contenedor"><p class="Leter-Black">{{title}}</p></div>-->
+  <div *ngIf="condicion" class="Background-gray divMarca contenedor"><h3 class="Leter-Grey">No hay salas disponibles</h3></div>
+  <br>
+  <ion-list radio-group [(ngModel)]="answer">
+      <ion-item *ngFor="let item of items">
+        <ion-label>{{item.room}}</ion-label>
+        <ion-radio value="{{item.room}}" (click)="model.options = item.id"  ></ion-radio>      
+      </ion-item>
+  </ion-list>  
+    <div class="divMarca contenedor">
+      <button [disabled]="!answer" ion-button full round class="button-home background-gris3" (click)="onclick(model.options,answer)">Siguiente</button>
+    </div>
+</ion-content>

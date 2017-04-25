@@ -1,0 +1,60 @@
+<!--
+  Generated template for the InfoDelEvento page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+<ion-header no-border>
+  <ion-navbar>
+    <button ion-button icon-only start menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title><span class="white OpenSansRegular">Acerca del Evento</span></ion-title>
+
+    <ion-buttons end>
+      <button ion-button icon-only (click)="openShare()" class="shareButton">
+        <img src="assets/img/icon-compartir.png"/>
+      </button>
+    </ion-buttons>
+
+  </ion-navbar>
+  <div text-center class="subHeader">
+    <button ion-button round class="button-info button-organizadoras background-rosa">Historia</button>
+    <button ion-button round class="button-info button-organizadoras background-gris3" [navPush]="organizadorasPage">Presentadoras</button>
+  </div>
+</ion-header>
+
+<ion-content>
+
+  <ion-card class="card-no-padding card-informacion">
+      <!--<img-loader src="http://dimmexico.co/images/{{informacion?.acerca_de_imagen}}" useImg spinner="true"></img-loader>-->
+      <!--<img src="http://dimmexico.co/images/{{informacion?.acerca_de_imagen}}"/>-->
+
+      <ion-card-content>
+          <!--<img src="assets/img/texto-din-con-fecha.png" class="titulo-img">-->
+          <p class="dim-titulo-chico"><span class="rosa OpenSansBold">DIM</span> - Marzo 8 de 2017</p>
+          <ion-card-title class="OpenSansBold">
+              {{informacion?.acerca_de_titulo}}
+          </ion-card-title>
+          <div class="long-text">
+              {{informacion?.acerca_de_description}}
+          </div>
+
+          <div class="video-container">
+            <iframe width="853" height="480" [src]="url" frameborder="0" ></iframe>
+          </div>
+      </ion-card-content>
+  </ion-card>
+
+</ion-content>
+
+<div class="sliderContainer" *ngIf="sponsors_items?.length > 2">
+
+  <ion-slides class="sponsors-slider" noSwiping="true" autoplayDisableOnInteraction="false" loop="true" freeMode="true" autoplay="2000">
+    <ion-slide *ngFor="let slide of sponsors_items">
+      <img src="http://dimmexico.co/pics_sponsors/{{slide?.picture}}"/>
+    </ion-slide>
+  </ion-slides>
+
+</div>

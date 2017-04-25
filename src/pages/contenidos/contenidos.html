@@ -1,0 +1,60 @@
+<!--
+  Generated template for the Patrocinadores page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+<ion-header no-border>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title><span class="white OpenSansRegular">Patrocinadores</span></ion-title>
+  </ion-navbar>
+  <ion-toolbar text-center white>
+    <span class="gris2">{{patrocinador_name}}</span>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content no-padding class="card-background-page">
+
+  <!--
+  <ion-card no-margin class="oradores-card" *ngFor="let item of contenidos_items" (click)="onclick(item.id, patrocinador_name)">
+    <img src="http://dimmexico.co/pics_contents/{{item?.picture}}" />
+    <div class="card-title">{{item?.title}}</div>
+  </ion-card>
+  -->
+
+  <ion-list class="list-organizadoras">
+
+    <ion-item class="OpenSansBold item-organizadoras" *ngFor="let item of contenidos_items" (click)="onclick(item.id, patrocinador_name)">
+
+      <div item-left class="div-left">
+        <img-loader src="http://dimmexico.co/pics_contents/{{item?.picture}}" useImg spinner="true"></img-loader>
+        <!--<img src="http://dimmexico.co/pics_contents/{{item?.picture}}" class="img-list-organizadoras">-->
+      </div>
+
+      <div padding-left>
+        <p text-right><img item-right src="assets/img/icon-Mas.png" class="signo-mas"></p>
+        <h2 class="organizadoras-list-title padding-left">{{item?.title}}</h2>
+      </div>
+
+    </ion-item>
+
+  </ion-list>
+
+</ion-content>
+
+
+
+<div class="sliderContainer" *ngIf="sponsors_items?.length > 2">
+
+  <ion-slides class="sponsors-slider" noSwiping="true" autoplayDisableOnInteraction="false" loop="true" freeMode="true" autoplay="2000">
+    <ion-slide *ngFor="let slide of sponsors_items">
+      <img src="http://dimmexico.co/pics_sponsors/{{slide?.picture}}"/>
+    </ion-slide>
+  </ion-slides>
+
+</div>

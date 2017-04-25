@@ -1,0 +1,52 @@
+<ion-header>
+
+  <ion-navbar hideBackButton="true">
+    <!--
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    -->
+    <ion-title><span class="OpenSansBold white">En Juego</span></ion-title>
+  </ion-navbar>
+
+  <div class="subHeader">
+    <ion-card-header text-center class=" card-header-subtitle-2 gris2">
+      Seleccione la respuesta correcta
+    </ion-card-header>
+  </div>
+
+  <div class="subHeader">
+    <ion-card-header class="gris2 card-header-subtitle text-center">
+      <div item-left class="subHeaderLeft">Bienvenido, {{name}}</div>
+      <div item-right  class="subHeaderRight">{{trivia_name}}</div>
+    </ion-card-header>
+  </div>
+
+</ion-header>
+
+<ion-content>
+
+  <p class="pregunta OpenSansBold">{{question}}</p>
+
+
+  <ion-list radio-group [(ngModel)]="answer">
+
+    <ion-item  *ngFor="let item of items">
+      <ion-label class="respuesta">{{item.answer}}</ion-label>
+      <ion-radio value="{{item.id}}"></ion-radio>
+    </ion-item>
+
+  </ion-list>
+
+
+  <div text-center>
+    <button [disabled]="!answer" ion-button  round class="button-home background-rosa"  (click)="onclick()">Siguiente</button>
+  </div>
+
+</ion-content>
+
+<!--
+<div class="sliderContainer">
+      <img src="{{image}}/{{pictureSponsors}}"/>
+</div>
+-->

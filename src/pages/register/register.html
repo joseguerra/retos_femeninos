@@ -1,0 +1,56 @@
+<ion-header>
+
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Participa y gana</ion-title>
+  </ion-navbar>
+
+  <div class="subHeader">
+    <ion-card-header class="gris2 card-header-subtitle text-center">
+      <span >Registrate</span>
+    </ion-card-header>
+  </div>
+
+</ion-header>
+
+<ion-content padding>
+
+  <form novalidate [formGroup]="todo" (ngSubmit)="onclick()">
+    <ion-list>
+
+      <ion-item>
+        <ion-label floating>Nombre</ion-label>
+        <ion-input type="text" formControlName="nombre" [(ngModel)]="nombre"></ion-input>
+      </ion-item>
+
+      <ion-item *ngIf="!todo.controls.nombre.valid  && todo.controls.nombre.touched">
+        <p>Introduzca un nombre.</p>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Email</ion-label>
+        <ion-input type="text" formControlName="email" [(ngModel)]="email"></ion-input>
+      </ion-item>
+
+      <ion-item *ngIf="!todo.controls.email.valid  && todo.controls.email.touched">
+        <p>Introduzca un email.</p>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Password</ion-label>
+        <ion-input type="password" formControlName="password" [(ngModel)]="password"></ion-input>
+      </ion-item>
+
+      <ion-item *ngIf="!todo.controls.password.valid  && todo.controls.password.touched">
+        <p>Introduzca una contraseña.</p>
+      </ion-item>
+
+    </ion-list>
+
+    <p class='OpenSansItalic gris1' text-center>Al hacer click en Registrarse acepta los términos y condiciones y la política de privacidad de <strong>DIM</strong></p>
+
+    <button ion-button class="background-gris3 button-home" round block type="submit" [disabled]="!todo.valid">Registrarme</button>
+  </form>
+</ion-content>

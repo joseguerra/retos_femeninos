@@ -1,0 +1,31 @@
+<ion-menu id="myMenu" [content]="content">
+
+
+
+  <ion-content class="background-grey-1">
+    <div class="side-menu-logo background-white"><img src="assets/img/logo-botonera-desplegable.png"></div>
+    <div class="side-menu-text-top gris1 background-white">Marzo 8 de 2017</div>
+
+    <ion-list no-lines class="sidemenu-list background-grey-1">
+
+      <ion-list-header class="no-border title-side-bar background-grey-1">
+        <span clasS="gris3 OpenSansBold title-menu-sidebar">Acerca del Evento</span>
+      </ion-list-header>
+
+
+        <button menuClose clear ion-item detail-none *ngFor="let p of pages" (click)="openPage(p)" class="sidemenu-button background-grey-1">
+          <span class="item-menu-sidebar gris1">{{p.title}}</span>
+          <span class="side-more"><img src="assets/img/icon-Mas.png"></span>
+        </button>
+        <!--
+        <button menuClose ion-item (click)="close()">
+          Cerrar sesión
+        </button>
+        -->
+    </ion-list>
+  </ion-content>
+
+</ion-menu>
+
+<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

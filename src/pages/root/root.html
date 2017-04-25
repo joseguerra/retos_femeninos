@@ -1,0 +1,54 @@
+<!--
+  Generated template for the Root page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title><span class="OpenSansBold white">Día Internacional</span> <span class=" OpenSansRegular white">de la </span><span class="rosa OpenSansBold">Mujer</span></ion-title>
+  </ion-navbar>
+
+  <div class="subHeader">
+    <ion-card-header class="gris2 card-header-subtitle text-center">
+      <span >RETOS FEMENINOS</span>
+    </ion-card-header>
+  </div>
+
+</ion-header>
+
+<ion-content no-padding>
+
+  <ion-slides #mySlider class="slide_news" autoplay="2000" noSwiping="true"  pager="true" autoplayDisableOnInteraction="false" loop="true" *ngIf="haveData">
+
+    <ion-slide *ngFor="let item of news_items">
+      <img src="http://dimmexico.co/pics_news/{{item?.picture}}" (click)="launch(item?.link)">
+    </ion-slide>
+
+  </ion-slides>
+
+  <div class="buttons-home">
+    <button ion-button full round class="button-home background-rosa" [navPush]="acercaDelEventoPage">Acerca del Evento</button>
+
+    <!-- <button ion-button full button-home rosa [navPush]="oradoresPage">Oradores</button> -->
+    <button ion-button full round class="button-home background-gris3" (click)="onclick()">Participa y gana</button>
+
+    <button ion-button full round class="button-home background-gris1" [navPush]="finishedPage">Ganadores</button>
+  
+  </div>
+
+</ion-content>
+
+<div class="sliderContainer" *ngIf="sponsors_items?.length > 2">
+
+  <ion-slides class="sponsors-slider" noSwiping="true" autoplayDisableOnInteraction="false" loop="true" freeMode="true" autoplay="2000" *ngIf="sponsors_items?.length > 2">
+    <ion-slide *ngFor="let slide of sponsors_items">
+      <img src="http://dimmexico.co/pics_sponsors/{{slide?.picture}}"/>
+    </ion-slide>
+  </ion-slides>
+
+</div>

@@ -1,0 +1,48 @@
+<ion-header>
+
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title><span class="OpenSansBold white">Día Internacional de la Mujer</span></ion-title>
+  </ion-navbar>
+
+  <div class="subHeader" *ngIf="next">
+    <ion-card-header class="background-rosa card-header-subtitle-2">
+      SELECCIONE UNA <span class="OpenSansBold">CONFERENCIA</span>
+      <ion-icon name="arrow-down" item-right></ion-icon>
+    </ion-card-header>
+  </div>
+
+</ion-header>
+
+<ion-content>
+
+  <ion-refresher (ionRefresh)="doRefresh($event);">
+    <ion-refresher-content
+      pullingIcon="arrow-down"
+      pullingText="Desliza hacia abajo"
+      refreshingSpinner="circles"
+      refreshingText="Recargando...">
+    </ion-refresher-content>
+  </ion-refresher>
+
+  <div *ngIf="back" class="divBlack">
+    <h3 class="Leter-Black">Una vez finalizadas las trivias podrás ver los ganadores.</h3>
+    <button ion-button full round class="button-home background-rosa" (click)="volver()">Volver</button>
+  </div>
+
+  <br>
+
+  <ion-list radio-group [(ngModel)]="answer">
+    <ion-item *ngFor="let item of items">
+      <ion-label>{{item.title}}</ion-label>
+      <ion-radio value="{{item.title}}"></ion-radio>
+    </ion-item>
+  </ion-list>
+
+  <div *ngIf="next" class="divMarca contenedor">
+    <button [disabled]="!answer" ion-button full round class="button-home background-gris3" (click)="onclick()">Siguiente</button>
+  </div>
+
+</ion-content>

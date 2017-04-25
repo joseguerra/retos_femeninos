@@ -1,0 +1,771 @@
+// http://ionicframework.com/docs/v2/theming/
+
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+
+@font-face {
+    font-family: 'OpenSansRegular';
+    src: url('../assets/OpenSans-Regular.eot');
+    src: url('../assets/OpenSans-Regular.eot') format('embedded-opentype'),
+         url('../assets/OpenSans-Regular.woff2') format('woff2'),
+         url('../assets/OpenSans-Regular.woff') format('woff'),
+         url('../assets/OpenSans-Regular.ttf') format('truetype'),
+         url('../assets/OpenSans-Regular.svg#OpenSansRegular') format('svg');
+}
+
+@font-face {
+    font-family: 'OpenSansSemibolditalic';
+    src: url('../assets/OpenSans-Semibolditalic.eot');
+    src: url('../assets/OpenSans-Semibolditalic.eot') format('embedded-opentype'),
+         url('../assets/OpenSans-Semibolditalic.woff2') format('woff2'),
+         url('../assets/OpenSans-Semibolditalic.woff') format('woff'),
+         url('../assets/OpenSans-Semibolditalic.ttf') format('truetype'),
+         url('../assets/OpenSans-Semibolditalic.svg#OpenSansSemibolditalic') format('svg');
+}
+
+@font-face {
+    font-family: 'OpenSansSemibold';
+    src: url('../assets/OpenSans-Semibold.eot');
+    src: url('../assets/OpenSans-Semibold.eot') format('embedded-opentype'),
+         url('../assets/OpenSans-Semibold.woff2') format('woff2'),
+         url('../assets/OpenSans-Semibold.woff') format('woff'),
+         url('../assets/OpenSans-Semibold.ttf') format('truetype'),
+         url('../assets/OpenSans-Semibold.svg#OpenSansSemibold') format('svg');
+}
+
+@font-face {
+    font-family: 'OpenSansBold';
+    src: url('../assets/OpenSans-Bold.eot');
+    src: url('../assets/OpenSans-Bold.eot') format('embedded-opentype'),
+         url('../assets/OpenSans-Bold.woff2') format('woff2'),
+         url('../assets/OpenSans-Bold.woff') format('woff'),
+         url('../assets/OpenSans-Bold.ttf') format('truetype'),
+         url('../assets/OpenSans-Bold.svg#OpenSansBold') format('svg');
+}
+
+@font-face {
+    font-family: 'OpenSansLightitalic';
+    src: url('../assets/OpenSans-Lightitalic.eot');
+    src: url('../assets/OpenSans-Lightitalic.eot') format('embedded-opentype'),
+         url('../assets/OpenSans-Lightitalic.woff2') format('woff2'),
+         url('../assets/OpenSans-Lightitalic.woff') format('woff'),
+         url('../assets/OpenSans-Lightitalic.ttf') format('truetype'),
+         url('../assets/OpenSans-Lightitalic.svg#OpenSansLightitalic') format('svg');
+}
+
+@font-face {
+    font-family: 'OpenSansItalic';
+    src: url('../assets/OpenSans-Italic.eot');
+    src: url('../assets/OpenSans-Italic.eot') format('embedded-opentype'),
+         url('../assets/OpenSans-Italic.woff2') format('woff2'),
+         url('../assets/OpenSans-Italic.woff') format('woff'),
+         url('../assets/OpenSans-Italic.ttf') format('truetype'),
+         url('../assets/OpenSans-Italic.svg#OpenSansItalic') format('svg');
+}
+
+ion-app.md {
+  font-family: 'OpenSansRegular'
+}
+
+
+.OpenSansItalic{
+  font-family: 'OpenSansItalic'
+}
+
+.OpenSansBold{
+  font-family: 'OpenSansBold'
+}
+
+.OpenSansRegular{
+  font-family: 'OpenSansRegular'
+}
+
+.OpenSansLightitalic{
+  font-family: 'OpenSansLightitalic'
+}
+
+.background-grey-1{
+  background: #f6f6f6;
+}
+
+.Background-gray{
+  background-color: lightgray;
+}
+
+.Background-black{
+  background-color: #2d2d2d;
+}
+
+.Background-red{
+  background-color: #f13644;
+}
+
+.areaContent{
+    margin-top:10px;
+}
+
+.center{
+  text-align: center;
+}
+.Leter-Black{
+  color: white;
+}
+.Leter-Grey{
+  color: #8c8c8c;
+}
+.Leter-white{
+  color: #ffffff !important;
+}
+
+.Leter-wred{
+  color: #e13838;
+}
+/*
+.MyList .item{
+  background-color: #2d2d2d;
+  color : #ffffff !important;
+  box-shadow : 0px 6px 10px #888888;
+}
+*/
+
+.divParticipa{
+  width: 100%;
+  height: 5%;
+  overflow: auto;
+}
+
+.divMarca{
+  width: 100%;
+  /*height: 15%;*/
+  overflow: auto;
+}
+
+.divDas{
+  width: 100%;
+  height: 90%;
+  overflow: auto;
+}
+
+.contenedor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center
+}
+
+.long-text {
+  white-space: pre-line;
+  text-align: inherit;
+}
+
+.bar-button-default-ios, .bar-button-default.bar-button-ios-default, .bar-button-clear-ios-default{
+  color: #ec2d46;
+}
+
+
+.subHeader{
+  background: #2b2a30;
+}
+
+.rosa{color: #F13644 !important}
+.gris2{color:#B3B3B3 !important}
+.gris1{color:#77777A !important}
+.gris3{color:#2A2A2F !important}
+.white{color:#FDFDFB !important}
+
+.ion-ios-menu{color: #F13644}
+
+.background-gris3{background: #2A2A2F}
+.background-gris2{background: #B3B3B3}
+.background-gris1{background: #77777A}
+.background-rosa{background: #F13644; color: white}
+.background-white{background: #FDFDFB}
+
+.text-center{text-align: center}
+
+.toolbar{
+  border-bottom: 1px solid #555;
+}
+
+.slide_news{ height: auto;;}
+
+.swiper-pagination-bullet-active{
+  background: #F13644 !important;
+}
+.swiper-pagination-bullet{
+  background: #FDFDFB;
+}
+
+.button-home{
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 8px;
+  margin-top: 5px;
+  padding: 25px;
+  color: white;
+  font-size: 1.7rem;
+  font-family: OpenSansRegular;
+  text-transform: none;
+}
+
+.cntstyle {
+background-color: #06c;
+// background: linear-gradient(to bottom, #06c , white);
+}
+.cntstyle .list{
+background-color: transparent;
+}
+.cntstyle .item, .cntstyle .item-content, .cntstyle .item-complex{
+background-color: transparent;
+color: #FFFFFF;
+border-color: rgba(0,0,0,0);
+}
+
+.side-menu-text-top{
+  text-align: center;
+  font-size: 1.2rem;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  padding: 7px 0px;
+}
+
+.no-border{
+  border: none
+}
+
+.title-side-bar{
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  margin-bottom: 0px
+}
+
+.title-side-bar .label{
+  margin:0px
+}
+
+.item-menu-sidebar{
+  margin-bottom: 0px;
+  font-size: 1.5rem;
+}
+
+.title-menu-sidebar{
+    /*padding-left: 16px;*/
+}
+
+ion-label{
+    padding: 0px 0px;
+}
+
+.back-button-icon-md{
+    color: #F13644
+}
+
+.toolbar-title{
+  font-size: 1.6rem;
+  padding: 0 0px;
+}
+
+.side-menu-logo{
+  text-align: right;
+  padding-right: 20px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.side-more{
+  float: right
+}
+
+.container-top-info{
+  padding: 5px
+}
+
+.titulo-img{
+  width: auto
+}
+
+.card-no-padding{
+  padding: 0px;
+  margin: 0px;
+  width: 100%;
+  border:none
+}
+
+.sponsors-slider{
+  height: auto;
+  position: relative;
+  background: white; /*#e6e6e6;*/
+  z-index: 3;
+  /*padding-top: 10px;*/
+}
+
+.card-header-subtitle{
+  padding: 9px;
+  font-size: 1.1rem;
+}
+
+.card-header-subtitle-2{
+  padding: 9px !important;
+  font-size: 1.4rem;
+  color: #333;
+}
+
+.card-informacion{
+  position: relative;
+}
+.buttons-home{
+  top: 10px;
+}
+
+.scroll-content{bottom: 57px}
+
+
+.list-organizadoras{
+  margin: 0px !important;
+}
+
+
+.item-organizadoras{
+  padding: 0px;
+  margin-top: -5px;
+  border-top: 1px solid #ddd;
+}
+.img-list-organizadoras{
+  width: 100%
+}
+
+.div-left{
+  width:50%;
+  margin: 0px !important;
+}
+
+.organizadoras-list-title{
+  white-space: normal;
+}
+
+.signo-mas{
+  /*width:15px;*/
+}
+
+.text-list-organizadoras{
+    margin: 0px 0px 5px 10px !important;
+}
+
+.italic1{
+
+}
+.subHeader + ion-grid {padding-top:50px}
+
+
+.acerca-del-evento-img{
+  width: 70%;
+}
+
+
+.acerca-del-evento-text{
+  font-size: 1.8rem;
+}
+.acerca-del-evento-line{
+  border-right: 1px solid #a52d36;
+}
+
+.acerca-del-evento-bottom-line:after {
+    display:block;
+    clear:both;
+    content : "";
+    position: relative;
+    left    : 0;
+    bottom  : 0;
+    max-width:350px;
+    height  : 1px;
+    width   : 70%;  /* or 100px */
+    border-bottom:1px solid #a52d36;
+    margin:0 auto;
+    padding:4px 0px;
+}
+
+.oradores-card{
+  width: 100%
+}
+
+.card-background-page {
+
+  ion-card {
+    position: relative;
+    text-align: left;
+  }
+
+  .card-title {
+    position: absolute;
+    top: 39%;
+    font-size: 1.3em;
+    width: 100%;
+    font-weight: bold;
+    color: #fff;
+    padding-left: 10px;
+    width: 44%;
+    text-transform: none;
+  }
+
+
+  .card-subtitle {
+    font-size: 1.0em;
+    position: absolute;
+    top: 52%;
+    width: 100%;
+    color: #fff;
+  }
+
+}
+.sidemenu-button > .item-inner{
+  background: none
+}
+
+/*.patrocinadores-item{
+  height: 183px;
+}*/
+
+.sliderContainer{
+  position: absolute;
+  bottom: 0px;
+  height: 60px;
+  width: 100%;
+  background: white;
+}
+
+.facebookButton{
+  background: #4050cf;
+  color:white;
+  font-size: 1.5rem
+}
+
+.ios, .md {
+    page-salas {
+      .scroll-content {
+        height: 100%
+      }
+
+      #map {
+        width: 100%;
+        height: 100%;
+      }
+    }
+}
+
+.dim-titulo-chico{
+  font-size: 1.1rem !important;
+}
+
+ion-app._gmaps_cdv_ .nav-decor{
+  background-color: transparent !important;
+}
+.shareButton{
+  margin-right: 5px
+}
+
+.toolbar-ios ion-title{
+  padding: 0 30px 1px;
+}
+
+.button-organizadoras{
+  height: 2.0em;
+      font-size: 1.3rem;
+}
+
+page-redes{
+  .logo-redes{
+    width:40%
+  }
+  .label-md{margin: 0px;}
+
+  .top-negativo{
+    margin-top: -10px
+  }
+  page-redes ion-label{margin: 0px !important;}
+  .label-ios{ margin: 0px !important; }
+}
+
+page-city{
+    .button-home{
+      width: 80%;
+      margin: 0 auto;
+      color: white;
+      font-size: 1.7rem;
+      font-family: OpenSansRegular;
+      text-transform: none;
+      top: 5px;
+      position: relative
+    }
+    .sliderContainer{
+      /*position: absolute;*/
+      bottom: 0px;
+      height: 65px;
+      width: 100%;
+      background: white;
+      text-align: center;
+      /*z-index: 10000;*/
+      border-top: 1px dashed #ddd !important;
+    }
+
+    .button-city{
+      padding: 4px;
+      height: 40px;
+      margin-top: 10px
+    }
+    .subHeaderLeft{
+      text-align: left;
+    }
+}
+
+page-result{
+    ion-content, .fixed-content, .scroll-content{
+      background: #f60037
+    }
+    .background-rosa2{
+      background: #d5183a !important
+    }
+    .background-rosa, ion-list, .list, ion-item, .item, .item-inner{
+      background: #f60037 ;
+    }
+    ion-item{
+      border: none !important;
+      padding-right: 15px !important;
+    }
+    ion-label, ion-note{height: 24px}
+    ion-list{margin-top:40px !important}
+    .note-ios, ion-label{color: white}
+    h2{font-family: OpenSansBold;  font-size: 2.0rem !important}
+    .note{color: #888 !important}
+    .font-black{ color: #2b2a30 !important; font-size: 1.5rem; margin-bottom: 0px !important}
+    .list-md .item-block .item-inner{
+      border-bottom: 1px solid #333;
+    }
+    .subHeaderLeft{
+      text-align: left
+    }
+}
+
+page-informacion{
+  .video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 30px; height: 0; overflow: hidden;
+  margin-top: 20px;
+  }
+
+  .video-container iframe,
+  .video-container object,
+  .video-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  }
+}
+
+page-register{
+    p{font-size: 1.1rem}
+}
+
+page-index{
+
+  .button-home{
+    width: 100% !important;
+  }
+  .scroll-content{
+    bottom: 0px;
+  }
+}
+
+.toolbar-title-ios{
+  font-weight: 500;
+}
+
+page-sponsors{
+    .scroll-content{bottom: 0px !important;}
+}
+
+page-patrocinadores{
+  .scroll-content{
+    bottom: 0px;
+  }
+}
+
+page-salas{
+  /*
+  .footer{
+    height: 150px;
+    background: white;
+  }
+  */
+  .map-container{
+    height: 100%;
+    //padding-bottom: 177px;
+  }
+
+  .button-home{
+    width: 100%;
+    margin: 0 auto;
+    padding: 19px;
+    color: white;
+    font-size: 1.5rem;
+    font-family: OpenSansRegular;
+    text-transform: none;
+  }
+
+}
+
+
+page-trivia{
+  .pregunta{
+    font-family: OpenSansBold;
+    font-size: 2.3rem !important;
+    color: #220a12 !important;
+    padding-left: 15px
+  }
+
+  .scroll-content{bottom: 0px !important;}
+
+  .card-header-subtitle-2{
+    border-bottom: 1px solid #555
+  }
+  .subHeaderLeft{
+    text-align: left;
+  }
+  .title-md{
+        text-align: center;
+  }
+}
+
+page-winner{
+
+  .scroll-content{bottom: 0px !important; background: #2A2A2F}
+
+  .item-md{background: none}
+
+  ion-avatar{
+      background: #F13644;
+      color: white;
+      text-align:center;
+      border-radius: 20px;
+      padding-top: 5px;
+      font-family: OpenSansBold;
+      font-size: 1.6rem;
+      padding-top: 13px
+  }
+  ion-label{color: #eee; }
+}
+
+page-finished{
+  .divBlack{
+    background: #333;
+    height: 100%;
+    margin-top: 0px;
+    padding-bottom: 14px;
+    padding: 50px 20px
+  }
+  .Leter-Black{
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  .scroll-content{bottom: 0px !important;}
+
+  ion-list{
+    margin-top:  25px !important
+  }
+}
+
+page-final{
+  ion-content{
+    background-color: #2b2a30 !important;
+  }
+  .divFinal{
+    width: 100%;
+    overflow: auto;
+    padding: 0 20px;
+    text-align: center;
+  }
+  .divFinal > h1 {color: #f50037; font-family: OpenSansBold; font-size: 3.3rem; margin-top: 60px}
+  .divFinal > h4 {color: #fff;  font-size: 2.0rem}
+  .divFinal > h4 {color: #fff;  font-size: 1.6rem;  }
+  .divFinal > h3 {color: #fff;  font-size: 1.6rem; font-family: OpenSansItalic}
+}
+
+.alert-title{
+  font-family: 'OpenSansBold'
+}
+.alert-button{
+    background: #F13644;
+    color: white;
+    width: +60%;
+    text-align: center;
+    border-radius: 24px;
+    margin: 0 auto;
+}
+.alert-md .alert-button .button-inner{
+  text-align: center;
+  justify-content: center;
+}
+
+
+.alert-ios .alert-button-group{
+  background: #F13644;
+}
+.alert-ios .alert-button{
+  color: white
+}
+
+
+
+.respuesta{
+  font-size: 1.4rem;
+  white-space: normal;
+}
+
+.subHeader > ion-card-header > ion-icon{
+  float:right;
+}
+
+ion-card-header > h5{
+  margin: 0px 0px 5px
+}
+
+.alert-md .alert-head{
+    padding: 24px 24px 10px 24px;
+    text-align: center;
+}
+.alert-md .alert-button{
+  background: #F13644; color: white;
+  margin: 0 auto;
+}
+.alert-md .alert-title{ color: #F13644;}
+
+.alert-md .alert-sub-title{ margin: 9px 0 0; }
+
+.subHeaderLeft{
+  width: 50%;
+  float: left;
+}
+.subHeaderRight{
+  width: 50%;
+  float: left;
+  text-align: right
+}
+
+.has-refresher > .scroll-content{
+  border-top: 1px solid #555;
+  transition: none;
+}

@@ -1,0 +1,54 @@
+<!--
+  Generated template for the InfoDelEvento page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header no-border>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title><span class="white OpenSansRegular">Patrocinadores</span></ion-title>
+
+    <ion-buttons end>
+      <button ion-button icon-only (click)="openShare()" class="shareButton">
+        <img src="assets/img/icon-compartir.png"/>
+      </button>
+    </ion-buttons>
+
+  </ion-navbar>
+  <ion-toolbar text-center white>
+    <span class="gris2">{{patrocinador_name}}</span>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card class="card-no-padding card-informacion">
+      <img-loader *ngIf="contenido" src="http://dimmexico.co/pics_contents/{{contenido?.picture}}" useImg spinner="true"></img-loader>
+      <!--<img src="http://dimmexico.co/pics_contents/{{contenido?.picture}}"/>-->
+      <ion-card-content>
+          <!--<img src="assets/img/texto-din-con-fecha.png" class="titulo-img">-->
+          <p class="dim-titulo-chico"><span class="rosa OpenSansBold">DIM</span> - Marzo 8 de 2017</p>
+          <ion-card-title class="OpenSansBold">
+              {{contenido?.title}}
+          </ion-card-title>
+          <div class="long-text" [innerHTML]="contenido?.description">
+
+          </div>
+      </ion-card-content>
+  </ion-card>
+
+</ion-content>
+
+<div class="sliderContainer">
+
+  <ion-slides class="sponsors-slider" noSwiping="true"  autoplayDisableOnInteraction="false" loop="true" freeMode="true" autoplay="2000">
+    <ion-slide id="slideFalso"></ion-slide>
+    <ion-slide *ngFor="let slide of sponsors_items">
+      <img src="http://dimmexico.co/pics_sponsors/{{slide?.picture}}"/>
+    </ion-slide>
+  </ion-slides>
+
+</div>

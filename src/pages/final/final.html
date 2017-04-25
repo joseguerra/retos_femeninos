@@ -1,0 +1,37 @@
+<ion-header>
+
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title><span class="OpenSansBold white">Fin del Juego</span></ion-title>
+  </ion-navbar>
+
+  <div class="subHeader">
+    <ion-card-header class="gris2 card-header-subtitle text-center">
+      <div >DIM - Marzo 8 de 2007</div>
+    </ion-card-header>
+  </div>
+
+</ion-header>
+
+<ion-content class="divAbajo">
+
+  <div class="divFinal contenedor">
+    <h1>Muy bien</h1>
+  </div>
+  <!--
+  <div class="divFinal contenedor">
+    <img src="./assets/like.png" height="100" class="center" (click)="onclick()"/>
+  </div>
+-->
+  <div class="divFinal">
+    <h4 class='OpenSansItalic'>Haz contestado {{points}} de {{length}} correctamente en {{segundos | seconds}}</h4>
+    <h4>Mañana compartiremos en la app el listado de los ganadores</h4>
+
+    <h3>Gracias por participar</h3>
+
+    <br>
+    <button ion-button full round class="button-home background-rosa" (click)="toRoot()">Ok</button>
+  </div>
+</ion-content>

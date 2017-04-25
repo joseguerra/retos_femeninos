@@ -1,0 +1,71 @@
+  <!--
+  Generated template for the AcercaDelEvento page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+<ion-header no-border>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title><span class="OpenSansBold white">Día Internacional</span> <span class=" OpenSansRegular white">de la </span><span class="rosa OpenSansBold">Mujer</span></ion-title>
+  </ion-navbar>
+  <div class="subHeader">
+    <ion-card-header class="gris2 card-header-subtitle text-center">
+      <span >ACERCA DEL EVENTO</span>
+    </ion-card-header>
+  </div>
+</ion-header>
+
+
+<ion-content no-padding class="background-rosa">
+
+  <div class="areaContent">
+
+    <ion-grid >
+      <ion-row>
+        <ion-col width-50 class="white text-center acerca-del-evento OpenSansBold acerca-del-evento-line acerca-del-evento-bottom-line" [navPush]="informacionPage">
+            <img src="assets/img/icon-informacion-hd.png" class="acerca-del-evento-img"><br>
+            Información
+        </ion-col>
+        <ion-col width-50 class="white text-center acerca-del-evento OpenSansBold acerca-del-evento-bottom-line" [navPush]="oradoresPage">
+            <img src="assets/img/icon-oradores-hd.png" class="acerca-del-evento-img"><br>
+            Oradores
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col width-50 class="white text-center acerca-del-evento OpenSansBold acerca-del-evento-line acerca-del-evento-bottom-line" [navPush]="patrocinadoresPage">
+            <img src="assets/img/icon-patrocinios-hd.png" class="acerca-del-evento-img"><br>
+            Patrocinadores
+        </ion-col>
+        <ion-col width-50 class="white text-center acerca-del-evento OpenSansBold acerca-del-evento-bottom-line" (click)="clickSalas()">
+            <img src="assets/img/icon-salas-hd.png" class="acerca-del-evento-img"><br>
+            Salas Cinépolis
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col width-50 class="white text-center acerca-del-evento OpenSansBold acerca-del-evento-line" (click)="launch('http://cinepolis.com/contenidos-alternativos/pelicula/dia-internacional-de-la-mujer-conferencias-1')">
+            <img src="assets/img/icon-boletos-hd.png" class="acerca-del-evento-img"><br>
+            Comprar Boletos
+        </ion-col>
+        <ion-col width-50 class="white text-center acerca-del-evento OpenSansBold" [navPush]="redesPage">
+            <img src="assets/img/icon-redes-hd.png" class="acerca-del-evento-img"><br>
+            Redes Sociales
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+  </div>
+</ion-content>
+
+<div class="sliderContainer" *ngIf="sponsors_items?.length > 2">
+
+  <ion-slides class="sponsors-slider" noSwiping="true" autoplayDisableOnInteraction="false" loop="true" freeMode="true" autoplay="2000">
+    <ion-slide *ngFor="let slide of sponsors_items">
+      <img src="http://dimmexico.co/pics_sponsors/{{slide?.picture}}"/>
+    </ion-slide>
+  </ion-slides>
+
+</div>
